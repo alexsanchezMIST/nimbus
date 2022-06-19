@@ -19,36 +19,35 @@ const GlobalStyles = createGlobalStyle`
     --screen-xl-minus-one: calc(var(--screen-xl) - 0.0625rem);
     --screen-xxl-minus-one: calc(var(--screen-xxl) - 0.0625rem);
     --text-line-height: 1.33;
-    --text-size-100: clamp(0.42rem, calc(0.27rem + 0.38vw), 0.63rem);
-    --text-size-200: clamp(0.56rem, calc(0.36rem + 0.5vw), 0.84rem);
-    --text-size-300: clamp(0.75rem, calc(0.48rem + 0.67vw), 1.13rem);
-    --text-size-400: clamp(1rem, calc(0.64rem + 0.89vw), 1.5rem);
-    --text-size-500: clamp(1.33rem, calc(0.86rem + 1.19vw), 2rem);
-    --text-size-600: clamp(1.78rem, calc(1.14rem + 1.59vw), 2.67rem);
-    --text-size-700: clamp(2.37rem, calc(1.52rem + 2.11vw), 3.55rem);
-    --text-size-800: clamp(3.16rem, calc(2.03rem + 2.82vw), 4.74rem);
-    --text-size-900: clamp(4.21rem, calc(2.71rem + 3.76vw), 6.31rem);
-    --space-size-100: clamp(0.25rem, calc(0.16rem + 0.22vw), 0.38rem);
-    --space-size-200: clamp(0.5rem, calc(0.32rem + 0.45vw), 0.75rem);
-    --space-size-300: clamp(0.75rem, calc(0.48rem + 0.67vw), 1.13rem);
-    --space-size-400: clamp(1rem, calc(0.64rem + 0.89vw), 1.5rem);
-    --space-size-500: clamp(1.5rem, calc(0.96rem + 1.34vw), 2.25rem);
-    --space-size-600: clamp(2rem, calc(1.29rem + 1.79vw), 3rem);
-    --space-size-700: clamp(3rem, calc(1.93rem + 2.68vw), 4.5rem);
-    --space-size-800: clamp(4rem, calc(2.57rem + 3.57vw), 6rem);
-    --space-size-900: clamp(6rem, calc(3.86rem + 5.36vw), 9rem);
-    --space-range-400-600: clamp(1rem, calc(-0.43rem + 3.57vw), 3rem);
-    --space-range-400-900: clamp(1rem, calc(-4.71rem + 14.29vw), 9rem);
-    --color-primary-50: #000000;
-    --color-primary-100: #000000;
-    --color-primary-200: #000000;
-    --color-primary-300: #000000;
-    --color-primary-400: #000000;
-    --color-primary-500: #5333ff;
-    --color-primary-600: #000000;
-    --color-primary-700: #000000;
-    --color-primary-800: #000000;
-    --color-primary-900: #000000;
+    --text-size-100: clamp(0.42rem, calc(0.35rem + 0.18vw), 0.53rem);
+    --text-size-200: clamp(0.56rem, calc(0.46rem + 0.25vw), 0.7rem);
+    --text-size-300: clamp(0.75rem, calc(0.62rem + 0.33vw), 0.94rem);
+    --text-size-400: clamp(1rem, calc(0.82rem + 0.44vw), 1.25rem);
+    --text-size-500: clamp(1.33rem, calc(1.1rem + 0.59vw), 1.67rem);
+    --text-size-600: clamp(1.78rem, calc(1.46rem + 0.78vw), 2.22rem);
+    --text-size-700: clamp(2.37rem, calc(1.95rem + 1.04vw), 2.96rem);
+    --text-size-800: clamp(3.16rem, calc(2.6rem + 1.39vw), 3.95rem);
+    --text-size-900: clamp(4.21rem, calc(3.47rem + 1.85vw), 5.26rem);
+    --space-size-100: clamp(0.25rem, calc(0.21rem + 0.11vw), 0.31rem);
+    --space-size-200: clamp(0.5rem, calc(0.41rem + 0.22vw), 0.63rem);
+    --space-size-300: clamp(0.75rem, calc(0.62rem + 0.33vw), 0.94rem);
+    --space-size-400: clamp(1rem, calc(0.82rem + 0.44vw), 1.25rem);
+    --space-size-500: clamp(1.5rem, calc(1.24rem + 0.66vw), 1.88rem);
+    --space-size-600: clamp(2rem, calc(1.65rem + 0.88vw), 2.5rem);
+    --space-size-700: clamp(3rem, calc(2.47rem + 1.32vw), 3.75rem);
+    --space-size-800: clamp(4rem, calc(3.3rem + 1.76vw), 5rem);
+    --space-size-900: clamp(6rem, calc(4.95rem + 2.64vw), 7.5rem);
+    --space-range-from-400-to-900: clamp(1rem, calc(-3.57rem + 11.43vw), 7.5rem);
+    --color-primary-50: hsl(249, 100%, 93%);
+    --color-primary-100: hsl(250, 100%, 87%);
+    --color-primary-200: hsl(249, 100%, 80%);
+    --color-primary-300: hsl(249, 100%, 73%);
+    --color-primary-400: hsl(250, 100%, 67%);
+    --color-primary-500: hsl(249, 100%, 60%);
+    --color-primary-600: hsl(249, 100%, 48%);
+    --color-primary-700: hsl(249, 100%, 36%);
+    --color-primary-800: hsl(249, 100%, 24%);
+    --color-primary-900: hsl(250, 100%, 12%);
     --color-slate-50: hsl(210, 40%, 98%);
     --color-slate-100: hsl(210, 40%, 96%);
     --color-slate-200: hsl(214, 32%, 91%);
@@ -291,6 +290,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* Custom Global Styles */
+  body {
+    font-family: 'Raleway', var(--font-stack-sans);
+  }
+
   h1,
   h2,
   h3,
@@ -302,7 +305,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: var(--text-size-900);
+    font-size: var(--text-size-800);
     font-weight: 800;
     letter-spacing: -0.025em;
 
@@ -312,18 +315,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h2 {
-    font-size: var(--text-size-800);
-  }
-  h3 {
     font-size: var(--text-size-700);
   }
-  h4 {
+  h3 {
     font-size: var(--text-size-600);
   }
-  h5 {
+  h4 {
     font-size: var(--text-size-500);
   }
-  h6 {
+  h5, h6 {
     font-size: var(--text-size-400);
   }
 

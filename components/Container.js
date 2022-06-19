@@ -4,7 +4,7 @@ const StyledContainer = styled.div`
   position: relative;
   width: min(90%, var(--screen-xxl));
   margin-inline: ${(props) => (props.centered ? 'auto' : 'unset')};
-  padding-inline: var(--space-range-400-900);
+  padding-inline: var(--space-range-from-400-to-900);
 `;
 
 export default function Container({ children, centered }) {
